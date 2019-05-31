@@ -1,7 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/styles';
+import theme from '../../src/theme';
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 
@@ -43,10 +44,16 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
-      <Footer />
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <div>{children}</div>
+      </ThemeProvider>
     </div>
   )
 }
