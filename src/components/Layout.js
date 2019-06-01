@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from '../../src/theme';
-import './all.sass'
+// import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
@@ -52,7 +52,7 @@ const TemplateWrapper = ({ children }) => {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <div>{children}</div>
+        <main>{children}</main>
       </ThemeProvider>
     </div>
   )

@@ -1,5 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/styles';
+import theme from '../../theme';
 import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
@@ -7,6 +10,10 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 
   if (data) {
     return (
+      <React.Fragment>
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
       <IndexPageTemplate
         image={data.image}
         title={data.title}
@@ -16,6 +23,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
       />
+      </ThemeProvider>
+      </React.Fragment>
     )
   } else {
     return <div>Loading...</div>

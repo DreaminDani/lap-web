@@ -1,14 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-
-import Button from '@material-ui/core/Button';
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import { Grid, Typography, withStyles } from '@material-ui/core';
 
-export const IndexPageTemplate = ({
+export const IndexPageTemplate = withStyles({
+  root: {
+    margin: 40,
+    maxWidth: 1200,
+    height: '100%',
+    '@media (min-width: 1280px)': {
+      margin: '40px auto',
+    }
+  },
+  image: {
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }
+})(({
+  classes,
   image,
   title,
   heading,
@@ -17,12 +29,26 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <div>
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+  <div className={classes.root}>
+    <Typography variant="h1" gutterBottom>
+      {title}
+    </Typography>
+    <Grid container spacing={8}>
+      <Grid item xs={12} md={6}>
+        <Typography gutterBottom>
+          {description}
+        </Typography>
+        <iframe title="soundcloud player" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/444594507&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </Grid>
+      <Grid item className={classes.image} md={6} style={{
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`
+      }}>
+      </Grid>
+    </Grid>
   </div>
-)
+))
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -62,7 +88,7 @@ IndexPage.propTypes = {
   }),
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
