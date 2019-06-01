@@ -5,31 +5,42 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Grid, Typography, withStyles } from '@material-ui/core';
 
-export const IndexPageTemplate = withStyles({
+export const IndexPageTemplate = withStyles(theme => ({
   root: {
     margin: 40,
     maxWidth: 1200,
     height: '100%',
+    backgroundSize: '0 0',
     '@media (min-width: 1280px)': {
       margin: '40px auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      backgroundSize: 'contain',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundColor: 'rgba(48, 48, 48, 0.81) !important',
+      backgroundBlendMode: 'color',
     }
   },
   image: {
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    }
   }
-})(({
+}))(({
   classes,
   image,
   title,
-  heading,
-  subheading,
-  mainpitch,
   description,
-  intro,
 }) => (
-  <div className={classes.root}>
+  <div className={classes.root} style={{
+    backgroundImage: `url(${
+      !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+    })`
+  }}>
     <Typography variant="h1" gutterBottom>
       {title}
     </Typography>
@@ -53,13 +64,7 @@ export const IndexPageTemplate = withStyles({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -70,11 +75,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
