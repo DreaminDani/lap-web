@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+title: Life After Parties
+image: /img/halloween-2930008_1280.png
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
@@ -12,10 +12,16 @@ mainpitch:
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Doggo ipsum blep shoober bork snoot, maximum borkdrive. Borking doggo waggy
+  wags ur givin me a spook, dat tungg tho. Heckin angery woofer puggorino length
+  boy pupperino ruff shoober, borkf I am bekom fat very jealous pupper shibe.
+  Heckin many pats thicc fat boi, borking doggo very hand that feed shibe. Most
+  angery pupper I have ever seen super chub you are doing me the shock bork sub
+  woofer, pupperino wow very biscit. Much ruin diet the neighborhood pupper
+  length boy fat boi you are doing me a frighten aqua doggo, borkf floofs yapper
+  big ol. Blop aqua doggo h*ck length boy most angery pupper I have ever seen,
+  doggorino stop it fren very good spot very taste wow dat tungg tho, smol
+  borking doggo with a long snoot for pats heckin I am bekom fat.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -68,3 +74,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
