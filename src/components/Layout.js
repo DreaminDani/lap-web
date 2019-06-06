@@ -3,8 +3,9 @@ import Helmet from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from '../../src/theme';
-// import './all.sass'
+import './all.sass'
 import useSiteMetadata from './SiteMetadata'
+import Footer from './Footer';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -52,9 +53,12 @@ const TemplateWrapper = ({ children }) => {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <main>{children}</main>
+        <div className="site">
+          <main>{children}</main>
+          <Footer />
+        </div>
       </ThemeProvider>
-    </div>
+      </div>
   )
 }
 
