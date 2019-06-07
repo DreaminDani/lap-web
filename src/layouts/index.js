@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
+import './layout.scss';
 import theme from '../../src/theme';
 import useSiteMetadata from '../components/SiteMetadata'
 import Footer from '../components/Footer';
