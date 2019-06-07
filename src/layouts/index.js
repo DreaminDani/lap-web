@@ -3,9 +3,9 @@ import Helmet from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from '../../src/theme';
-import './all.sass'
-import useSiteMetadata from './SiteMetadata'
-import Footer from './Footer';
+import '../components/all.scss'
+import useSiteMetadata from '../components/SiteMetadata'
+import Footer from '../components/Footer';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
