@@ -1,5 +1,6 @@
 footer {
   width: 100%;
+  position: absolute; // for IE support
   position: sticky;
-  bottom: -20px;
+  bottom: 0;
 }
