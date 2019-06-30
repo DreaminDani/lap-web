@@ -14,6 +14,7 @@ export const IndexPageTemplate = withStyles(theme => ({
       margin: '40px auto',
     },
     [theme.breakpoints.down('sm')]: {
+      animation: '$colorRotate 12s linear infinite',
       backgroundSize: 'contain',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -22,11 +23,17 @@ export const IndexPageTemplate = withStyles(theme => ({
     }
   },
   image: {
+    animation: '$colorRotate 12s linear infinite',
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
+    }
+  },
+  '@keyframes colorRotate': {
+    '100%': {
+      '-webkit-filter': 'hue-rotate(360deg)'
     }
   }
 }))(({
@@ -48,7 +55,9 @@ export const IndexPageTemplate = withStyles(theme => ({
         <Typography gutterBottom>
           {description}
         </Typography>
-        <Link to="/about"><Button>About</Button></Link>
+        <Link to="/about"><Button>Meet the Band</Button></Link>
+        &nbsp;|&nbsp;
+        <Link to="/blog"><Button>Latest Updates</Button></Link>
         </Grid>
       <Grid item className={classes.image} md={6} style={{
         backgroundImage: `url(${

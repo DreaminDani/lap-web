@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import './layout.scss';
 import theme from '../../src/theme';
 import useSiteMetadata from '../components/SiteMetadata'
+import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 const TemplateWrapper = ({ children }) => {
@@ -54,6 +55,7 @@ const TemplateWrapper = ({ children }) => {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <div className="site">
+          <Nav />
           <main>{children}</main>
           <Footer />
         </div>

@@ -25,7 +25,7 @@ class IndexPagePreview extends React.Component {
   };
 
   render() {
-    const { entry, getAsset } = this.props;
+    const { entry } = this.props;
     const data = entry.getIn(['data']).toJS()
 
     if (data) {
