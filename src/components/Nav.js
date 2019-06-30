@@ -8,7 +8,7 @@ import { navigate } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   fab: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(3,2),
     position: 'absolute',
     top: 0,
     right: 0,
