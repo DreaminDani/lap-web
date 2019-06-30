@@ -12,6 +12,11 @@ module.exports = {
     'gatsby-plugin-layout',
     {
       resolve: 'gatsby-plugin-material-ui',
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
