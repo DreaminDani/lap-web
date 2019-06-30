@@ -47,7 +47,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+          href="https://fonts.googleapis.com/css?family=Oswald:400,500,700|Rubik+Mono+One&display=swap"
           rel="stylesheet"
         />
       </Helmet>
