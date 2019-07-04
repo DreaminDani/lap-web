@@ -2,24 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    margin: 40,
+    maxWidth: 1200,
+    height: '100%',
+  },
+  header: {
+    maxWidth: 'calc(100% - 80px)' // to account for width of nav button
+  }
+}))
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+  const classes = useStyles();
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className={classes.root}>
+      <h2 className={classes.header}>{title}</h2>
+      <PageContent className="content" content={content} />
     </section>
   )
 }

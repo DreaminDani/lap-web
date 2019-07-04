@@ -1,14 +1,24 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { withStyles, Button } from '@material-ui/core';
 import { Link, graphql } from 'gatsby'
+
+const styles = {
+  root: {
+    margin: 40,
+    maxWidth: 1200,
+    height: '100%',
+  },
+}
 
 class TagRoute extends React.Component {
   render() {
+    const { classes } = this.props;
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+          <h3>{post.node.frontmatter.title}</h3>
         </Link>
       </li>
     ))
@@ -20,28 +30,19 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`
 
     return (
-      <section className="section">
+      <section className={classes.root}>
         <Helmet title={`${tag} | ${title}`} />
-        <div className="container content">
-          <div className="columns">
-            <div
-              className="column is-10 is-offset-1"
-              style={{ marginBottom: '6rem' }}
-            >
-              <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-              <ul className="taglist">{postLinks}</ul>
-              <p>
-                <Link to="/tags/">Browse all tags</Link>
-              </p>
-            </div>
-          </div>
-        </div>
+        <h2>{tagHeader}</h2>
+        <ul>{postLinks}</ul>
+        <p>
+          <Link to="/tags/"><Button>Browse all tags</Button></Link>
+        </p>
       </section>
     )
   }
 }
 
-export default TagRoute
+export default withStyles(styles)(TagRoute);
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {

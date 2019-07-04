@@ -1,10 +1,18 @@
 h1, h2, h3, .MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3 {
   font-family: 'Rubik Mono One', sans-serif !important;
+  margin-bottom: 0;
 }
 
 @media (max-width: 700px) {
   h1, .MuiTypography-h1 {
     font-size:42px;
+  }
+}
+
+a {
+  color: #19857b;
+  &:hover {
+    color: #55b5aa;
   }
 }
 

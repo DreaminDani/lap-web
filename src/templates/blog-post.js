@@ -3,7 +3,19 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+import { makeStyles } from '@material-ui/core/styles';
 import Content, { HTMLContent } from '../components/Content'
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    margin: 40,
+    maxWidth: 1200,
+    height: '100%',
+  },
+  header: {
+    maxWidth: 'calc(100% - 80px)' // to account for width of nav button
+  }
+}))
 
 export const BlogPostTemplate = ({
   content,
@@ -13,34 +25,29 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
+  const classes = useStyles();
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className={classes.root}>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <h2 className={classes.header}>
+        {title}
+      </h2>
+      <p>{description}</p>
+      <PostContent content={content} />
+      {tags && tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map(tag => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      ) : null}
     </section>
   )
 }

@@ -2,6 +2,15 @@ import React from 'react'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    margin: 40,
+    maxWidth: 1200,
+    height: '100%',
+  },
+});
 
 const TagsPage = ({
   data: {
@@ -10,32 +19,26 @@ const TagsPage = ({
       siteMetadata: { title },
     },
   },
-}) => (
+}) => {
+  const classes = useStyles();
+
+  return (
   <React.Fragment>
-    <section className="section">
+    <section className={classes.root}>
       <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h1 className="title is-size-2 is-bold-light">Tags</h1>
+      <ul className="taglist">
+        {group.map(tag => (
+          <li key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <h3>{tag.fieldValue} ({tag.totalCount})</h3>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   </React.Fragment>
-)
+)}
 
 export default TagsPage
 
