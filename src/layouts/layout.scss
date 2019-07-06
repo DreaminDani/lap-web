@@ -1,5 +1,8 @@
 h1, h2, h3, .MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3 {
   font-family: 'Rubik Mono One', sans-serif !important;
+}
+
+h2, h3, .MuiTypography-h2, .MuiTypography-h3 {
   margin-bottom: 0;
 }
 
@@ -10,9 +13,9 @@ h1, h2, h3, .MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3 {
 }
 
 a {
-  color: #19857b;
+  color: #26A69A;
   &:hover {
-    color: #55b5aa;
+    color: #00BFA5;
   }
 }
 

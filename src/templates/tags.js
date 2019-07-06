@@ -5,10 +5,13 @@ import { Link, graphql } from 'gatsby'
 
 const styles = {
   root: {
-    margin: 40,
+    margin: '40px auto',
     maxWidth: 1200,
     height: '100%',
   },
+  taglist: {
+    listStyle: 'none',
+  }
 }
 
 class TagRoute extends React.Component {
@@ -33,7 +36,7 @@ class TagRoute extends React.Component {
       <section className={classes.root}>
         <Helmet title={`${tag} | ${title}`} />
         <h2>{tagHeader}</h2>
-        <ul>{postLinks}</ul>
+        <ul className={classes.taglist}>{postLinks}</ul>
         <p>
           <Link to="/tags/"><Button>Browse all tags</Button></Link>
         </p>

@@ -8,12 +8,20 @@ import Content, { HTMLContent } from '../components/Content'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: 40,
+    margin: '40px auto',
     maxWidth: 1200,
     height: '100%',
   },
   header: {
     maxWidth: 'calc(100% - 80px)' // to account for width of nav button
+  },
+  tagheader: {
+    marginBottom: 8,
+  },
+  taglist: {
+    marginTop: 0,
+    paddingLeft: 4,
+    listStyle: 'none',
   }
 }))
 
@@ -38,8 +46,8 @@ export const BlogPostTemplate = ({
       <PostContent content={content} />
       {tags && tags.length ? (
         <div style={{ marginTop: `4rem` }}>
-          <h4>Tags</h4>
-          <ul className="taglist">
+          <h4 className={classes.tagheader}>Tags</h4>
+          <ul className={classes.taglist}>
             {tags.map(tag => (
               <li key={tag + `tag`}>
                 <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>

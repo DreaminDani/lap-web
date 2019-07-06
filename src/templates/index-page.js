@@ -6,7 +6,7 @@ import { Grid, Typography, withStyles, Button } from '@material-ui/core';
 
 export const IndexPageTemplate = withStyles(theme => ({
   root: {
-    margin: 40,
+    margin: '40px auto',
     maxWidth: 1200,
     height: '100%',
     backgroundSize: '0 0',

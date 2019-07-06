@@ -6,10 +6,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
-    margin: 40,
+    margin: '40px auto',
     maxWidth: 1200,
     height: '100%',
   },
+  taglist: {
+    listStyle: 'none',
+  }
 });
 
 const TagsPage = ({
@@ -26,8 +29,8 @@ const TagsPage = ({
   <React.Fragment>
     <section className={classes.root}>
       <Helmet title={`Tags | ${title}`} />
-      <h1 className="title is-size-2 is-bold-light">Tags</h1>
-      <ul className="taglist">
+      <h1>Tags</h1>
+      <ul className={classes.taglist}>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
