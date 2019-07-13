@@ -47,7 +47,7 @@ export const IndexPageTemplate = withStyles(theme => ({
       !!image.childImageSharp ? image.childImageSharp.fluid.src : image
     })`
   }}>
-    <Typography variant="h1" gutterBottom>
+    <Typography style={{width: 100}} variant="h1" gutterBottom>
       {title}
     </Typography>
     <Grid container spacing={8}>
