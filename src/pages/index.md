@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Life After Parties
-image: /img/halloween-2930008_1280.png
+image: /img/life-after-parties-logo.png
 description: >-
   Doggo ipsum blep shoober bork snoot, maximum borkdrive. Borking doggo waggy
   wags ur givin me a spook, dat tungg tho. Heckin angery woofer puggorino length
