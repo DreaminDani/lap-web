@@ -14,7 +14,6 @@ export const IndexPageTemplate = withStyles(theme => ({
       margin: '40px auto',
     },
     [theme.breakpoints.down('sm')]: {
-      animation: '$colorRotate 12s linear infinite',
       backgroundSize: 'contain',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -22,18 +21,18 @@ export const IndexPageTemplate = withStyles(theme => ({
       backgroundBlendMode: 'color',
     }
   },
+  header: {
+    width: 100,
+    '@media (max-width: 700px)': {
+        fontSize: 42
+    },
+  },
   image: {
-    animation: '$colorRotate 12s linear infinite',
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
-    }
-  },
-  '@keyframes colorRotate': {
-    '100%': {
-      '-webkit-filter': 'hue-rotate(360deg)'
     }
   }
 }))(({
@@ -47,7 +46,7 @@ export const IndexPageTemplate = withStyles(theme => ({
       !!image.childImageSharp ? image.childImageSharp.fluid.src : image
     })`
   }}>
-    <Typography style={{width: 100}} variant="h1" gutterBottom>
+    <Typography className={classes.header} variant="h1" gutterBottom>
       {title}
     </Typography>
     <Grid container spacing={8}>
