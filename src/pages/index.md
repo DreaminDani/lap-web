@@ -2,16 +2,9 @@
 templateKey: index-page
 title: Life After Parties
 image: /img/life-after-parties-logo.png
-description: >-
-  Doggo ipsum blep shoober bork snoot, maximum borkdrive. Borking doggo waggy
-  wags ur givin me a spook, dat tungg tho. Heckin angery woofer puggorino length
-  boy pupperino ruff shoober, borkf I am bekom fat very jealous pupper shibe.
-  Heckin many pats thicc fat boi, borking doggo very hand that feed shibe. Most
-  angery pupper I have ever seen super chub you are doing me the shock bork sub
-  woofer, pupperino wow very biscit. Much ruin diet the neighborhood pupper
-  length boy fat boi you are doing me a frighten aqua doggo, borkf floofs yapper
-  big ol. Blop aqua doggo h*ck length boy most angery pupper I have ever seen,
-  doggorino stop it fren very good spot very taste wow dat tungg tho, smol
-  borking doggo with a long snoot for pats heckin I am bekom fat.
 ---
+Stand around the room and think about the next best way to fit metallic clanging and melodic guitar over the steady thrum of the bass. All chords and distortion against my filtered metronomic anti-rock. Anti-blues. “Post” has no signifier here.
 
+My decision is final, is antithetical to the status-quo shimmering reverb of modern independent music, instead cashing it in for the shimmering distortion and rigidity of a lo-fi post-punk tape (see: Elisa Waut, Solid Space, Cleaners From Venus, Lovesliescrushing, Candy Claws, Arvo Pärt, etc. etc. etc.). Byron was right about the revolution. There will be no need for the human and the push and pull of synthesis will become animalistic. The heartbeat of the future will be synthesized as the vinyl warble of Hyperdub soon becomes recognized as our heartbeat. The Sunn O))) bass destruction (Iain Standing) and the fragile, but sweet, guitar (Dani Sandoval) take the sounds of the past, pass it through loopers and self-destruct into the wall of sound.
+
+The interconnected neural non-friction of the music of the future is the 50/50 analog/digital dub of Neuromancer translated to the listenable, interstitial physical. The Big One is coming but not before our connectors are placed everywhere. Eventually my noise will overtake the dub, will overtake the sounds, will distort and manipulate. My songs are instinctive, my metronome allowing for movement.

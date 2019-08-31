@@ -40,7 +40,7 @@ export const IndexPageTemplate = withStyles(theme => ({
   classes,
   image,
   title,
-  description,
+  body,
 }) => (
   <div className={classes.root} style={{
     backgroundImage: `url(${
@@ -53,9 +53,7 @@ export const IndexPageTemplate = withStyles(theme => ({
         <Typography className={classes.header} variant="h1" gutterBottom>
           {title}
         </Typography>
-        <Typography gutterBottom>
-          {description}
-        </Typography>
+        <Typography dangerouslySetInnerHTML={{ __html: body}} gutterBottom />
         <Link to="/about"><Button>Meet the Band</Button></Link>
         &nbsp;|&nbsp;
         <Link to="/blog"><Button>Latest Updates</Button></Link>
@@ -73,17 +71,18 @@ export const IndexPageTemplate = withStyles(theme => ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  description: PropTypes.string,
+  body: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter, html } = data.markdownRemark
+  console.log(data.markdownRemark);
 
   return (
     <IndexPageTemplate
       image={frontmatter.image}
       title={frontmatter.title}
-      description={frontmatter.description}
+      body={html}
     />
   )
 }
@@ -101,6 +100,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
         image {
@@ -110,7 +110,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        description
       }
     }
   }
