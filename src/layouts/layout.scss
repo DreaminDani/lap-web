@@ -44,5 +44,11 @@ a {
     p {
       clear: both;
     }
+    video {
+      padding-top: 16px;
+      float: right;
+      width: 100%;
+      max-width: 600px;
+    }
   }
 }
