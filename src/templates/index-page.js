@@ -53,7 +53,7 @@ export const IndexPageTemplate = withStyles(theme => ({
         <Typography className={classes.header} variant="h1" gutterBottom>
           {title}
         </Typography>
-        <Typography dangerouslySetInnerHTML={{ __html: body}} gutterBottom />
+        {body}
         <Link to="/about"><Button>Meet the Band</Button></Link>
         &nbsp;|&nbsp;
         <Link to="/blog"><Button>Latest Updates</Button></Link>
