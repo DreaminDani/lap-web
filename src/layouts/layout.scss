@@ -27,3 +27,22 @@ a {
     flex-grow: 1;
   }
 }
+
+.content {
+  &.about-page {
+    // enforce layout using style to make editing easier
+    img,.gatsby-resp-image-wrapper {
+      height: 200px;
+      width: 208px;
+      padding-right: 8px;
+      float: left;
+    }
+    h3 {
+      clear: both;
+      padding-top: 24px;
+    }
+    p {
+      clear: both;
+    }
+  }
+}

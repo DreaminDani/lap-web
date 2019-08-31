@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <section className={classes.root}>
       <h2 className={classes.header}>{title}</h2>
-      <PageContent className="content" content={content} />
+      <PageContent className="content about-page" content={content} />
     </section>
   )
 }
