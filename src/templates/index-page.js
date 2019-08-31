@@ -28,6 +28,7 @@ export const IndexPageTemplate = withStyles(theme => ({
     },
   },
   image: {
+    marginTop: 16,
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -46,11 +47,12 @@ export const IndexPageTemplate = withStyles(theme => ({
       !!image.childImageSharp ? image.childImageSharp.fluid.src : image
     })`
   }}>
-    <Typography className={classes.header} variant="h1" gutterBottom>
-      {title}
-    </Typography>
+    
     <Grid container spacing={8}>
       <Grid item xs={12} md={6}>
+        <Typography className={classes.header} variant="h1" gutterBottom>
+          {title}
+        </Typography>
         <Typography gutterBottom>
           {description}
         </Typography>

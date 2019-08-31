@@ -33,9 +33,9 @@ a {
     // enforce layout using style to make editing easier
     img,.gatsby-resp-image-wrapper {
       height: 200px;
-      width: 208px;
-      padding-right: 8px;
+      width: 200px;
       float: left;
+      margin-right: 8px !important;
     }
     h3 {
       clear: both;

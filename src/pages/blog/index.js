@@ -8,7 +8,13 @@ const useStyles = makeStyles(theme => ({
     margin: '40px auto',
     maxWidth: 1200,
     height: '100%',
-  }
+  },
+  header: {
+    width: 100,
+    '@media (max-width: 700px)': {
+        fontSize: 42
+    },
+  },
 }))
 
 export default function BlogIndexPage () {
@@ -16,7 +22,7 @@ export default function BlogIndexPage () {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h1" gutterBottom>
+      <Typography className={classes.header} variant="h1" gutterBottom>
         Latest Updates
       </Typography>
       <section className="section">
