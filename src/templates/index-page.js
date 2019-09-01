@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
+import Content, { HTMLContent } from '../components/Content'
 
 import { Grid, Typography, withStyles, Button } from '@material-ui/core';
 
@@ -28,20 +29,29 @@ export const IndexPageTemplate = withStyles(theme => ({
     },
   },
   image: {
-    marginTop: 16,
+    marginTop: 64,
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     }
+  },
+  button: {
+    '& span': {
+      fontSize: 24,
+    }
   }
 }))(({
   classes,
   image,
   title,
-  body,
-}) => (
+  content,
+  contentComponent,
+}) => {
+  const PageContent = contentComponent || Content
+  
+  return (
   <div className={classes.root} style={{
     backgroundImage: `url(${
       !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -53,10 +63,10 @@ export const IndexPageTemplate = withStyles(theme => ({
         <Typography className={classes.header} variant="h1" gutterBottom>
           {title}
         </Typography>
-        {body}
-        <Link to="/about"><Button>Meet the Band</Button></Link>
+        <PageContent className="content" content={content} />
+        <Link className={classes.button} to="/about"><Button>Meet the Band</Button></Link>
         &nbsp;|&nbsp;
-        <Link to="/blog"><Button>Latest Updates</Button></Link>
+        <Link className={classes.button} to="/blog"><Button>Latest Updates</Button></Link>
         </Grid>
       <Grid item className={classes.image} md={6} style={{
         backgroundImage: `url(${
@@ -66,7 +76,7 @@ export const IndexPageTemplate = withStyles(theme => ({
       </Grid>
     </Grid>
   </div>
-))
+)})
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -80,9 +90,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <IndexPageTemplate
+      contentComponent={HTMLContent}
       image={frontmatter.image}
       title={frontmatter.title}
-      body={html}
+      content={html}
     />
   )
 }

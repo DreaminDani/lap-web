@@ -25,7 +25,7 @@ class IndexPagePreview extends React.Component {
   };
 
   render() {
-    const { entry } = this.props;
+    const { entry, widgetFor } = this.props;
     const data = entry.getIn(['data']).toJS()
 
     if (data) {
@@ -43,7 +43,7 @@ class IndexPagePreview extends React.Component {
               <IndexPageTemplate
                 image={data.image}
                 title={data.title}
-                description={data.description}
+                content={widgetFor('body')}
               />
            </ThemeProvider>
           </StylesProvider>
@@ -61,6 +61,7 @@ IndexPagePreview.propTypes = {
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
+  widgetFor: PropTypes.func,
 }
 
 export default IndexPagePreview
