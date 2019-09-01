@@ -2,8 +2,11 @@
 templateKey: about-page
 title: Meet the band
 ---
-<video poster="/img/thegif_poster.gif" autoplay muted loop playsinline width="640" height="640">
-    <source src="/img/thevideo_betterquality.mp4" type="video/mp4"></video>
+<div class="band-video">
+    <video poster="/img/thegif_poster.gif" autoplay muted loop playsinline width="640" height="640">
+        <source src="/img/thevideo_betterquality.mp4" type="video/mp4">
+    </video>
+</div>
 
 ### Iain Standing
 ![A bassist's backside](/img/iain.jpg)

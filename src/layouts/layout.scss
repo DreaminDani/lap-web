@@ -44,12 +44,18 @@ a {
     p {
       clear: both;
     }
-    video {
+    .band-video {
       padding-top: 16px;
       width: 100%;
       max-width: 600px;
       display: block;
       margin: 0 auto;
+      @media (max-width: 800px) {
+        content: url(/img/thegif_poster.gif);
+        video {
+          display: none;
+        }
+      }
     }
   }
 }
