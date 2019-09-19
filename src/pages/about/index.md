@@ -11,7 +11,7 @@ title: Meet the band
 ### Iain Standing
 
 ![A bassist's backside](/img/iain.jpg)
-Iain Standing is the long-standing bassist/Burroughs-esque carnival barker/sound artist for Life After Parties. The band originally stemmed from his desire to combine the experimentalism of Krautrock, Post-Punk, Doom metal, and electronic music together into an entity he couldn't figure out for years. Through manipulation of feedback and pedals, along with a chordal bass playing style, Iain creates the analog destructive force within Life After Parties.
+Iain Standing is the long-standing bassist/sound artist/carnival barker for Life After Parties. The band originally stemmed from his desire to combine the experimentalism of Krautrock, Post-Punk, Doom metal, and electronic music together into an entity he couldn't figure out for years. Through manipulation of feedback and pedals, along with a chordal bass playing style, Iain creates the analog destructive force within Life After Parties.
 
 ### Dani Sandoval
 
