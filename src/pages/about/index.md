@@ -9,13 +9,16 @@ title: Meet the band
 </div>
 
 ### Iain Standing
+
 ![A bassist's backside](/img/iain.jpg)
-And Saint Attila raised the hand grenade up on high, saying, "O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy." And the Lord did grin. And the people did feast upon the lambs and sloths, and carp and anchovies, and orangutans and breakfast cereals, and fruit-bats and large chu...
+Iain Standing is the long-standing bassist/Burroughs-esque carnival barker/sound artist for Life After Parties. The band originally stemmed from his desire to combine the experimentalism of Krautrock, Post-Punk, Doom metal, and electronic music together into an entity he couldn't figure out for years. Through manipulation of feedback and pedals, along with a chordal bass playing style, Iain creates the analog destructive force within Life After Parties.
 
 ### Dani Sandoval
+
 ![A guitarist's backside](/img/dani.jpg)
 And Saint Attila raised the hand grenade up on high, saying, 'O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.' And the Lord did grin. And the people did feast upon the lambs and sloths, and carp and anchovies, and orangutans and breakfast cereals, and fruit-bats and large chu...
 
 ### ArtuBrute (the drum machine)
+
 ![A drummachine's backside](/img/artubrute.jpg)
-And the Lord spake, saying, "First shalt thou take out the Holy Pin. Then shalt thou count to three, no more, no less. Three shall be the number thou shalt count, and the number of the counting shall be three. Four shalt thou not count, neither count thou two, excepting that thou then proceed to three. Five is right out! Once the number three, being the third number, be reached, then lobbest thou thy Holy Hand Grenade of Antioch towards thy foe, who, being naughty in my sight, shall snuff it.
+Counts to four, and four again. Run that back. Four against six. Shows up to practice every week.
