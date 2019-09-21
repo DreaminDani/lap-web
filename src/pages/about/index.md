@@ -16,7 +16,7 @@ Iain Standing is the long-standing bassist/sound artist/carnival barker for Life
 ### Dani Sandoval
 
 ![A guitarist's backside](/img/dani.jpg)
-And Saint Attila raised the hand grenade up on high, saying, 'O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.' And the Lord did grin. And the people did feast upon the lambs and sloths, and carp and anchovies, and orangutans and breakfast cereals, and fruit-bats and large chu...
+After being adopted by message boards and other nascent internet trends in the mid 2000s, Dani rebelled against the machine by becoming one. A literal cyborg, Life After Parties' guitarist and vocalist has built his performances from a series of opposing standards, influences and unfortunate events. Dani daylights as a product designer / small dog owner and is too clever for his own good...
 
 ### ArtuBrute (the drum machine)
 
